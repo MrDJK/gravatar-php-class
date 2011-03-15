@@ -1,0 +1,12 @@
+Gravatar PHP Class (PHP5)
+
+Documentation
+All we require, is an email address or a MD5()'d hash of an email address.
+For example:
+	example@example.tld // Email address
+	c1ec093716eb76ae6d92e8fdbd020c82 // MD5'd hash of the above email
+
+It's quite simple, hey? It is just as simple to use, include the library in your PHP script and to display a Gravatar all you need to do is
+	echo Gravatar::get_image('example@example.tld');
+
+But what if you want more control over what happens? Well, we will give it to you if you require it!
