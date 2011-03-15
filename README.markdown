@@ -1,6 +1,6 @@
-Gravatar PHP Class (PHP5)
+# Gravatar PHP Class (PHP5)
 
-Documentation
+## Documentation
 All we require, is an email address or a MD5()'d hash of an email address.
 For example:
 	example@example.tld // Email address
@@ -12,16 +12,18 @@ It's quite simple, hey? It is just as simple to use, include the library in your
 But what if you want more control over what happens? Well, we will give it to you if you require it!
 
 We allow you to edit a bunch of things ranging from a default image the the css class! You can edit:
-	default - The default images that Gravatar allows you to use (404, mm, identicon, monsterid, wavatar, retro) or, just link your own one up!
-	size - The size of the gravatar
-	rating - The rating of the image (G, PG, R, X)
-	force_default - Whether to or not display the default by force
+
+* default - The default images that Gravatar allows you to use (404, mm, identicon, monsterid, wavatar, retro) or, just link your own one up!
+* size - The size of the gravatar
+* rating - The rating of the image (G, PG, R, X)
+* force_default - Whether to or not display the default by force
 
 For those above, you can also check the Gravatar docs at: http://en.gravatar.com/site/implement/images/
 
 And another two extra options.
-	generate_image - To generate HTML markup for the image
-	css_id - Add a custom class name to the image if generate_image is TRUE
+
+* generate_image - To generate HTML markup for the image
+* css_id - Add a custom class name to the image if generate_image is TRUE
 	
 Right, how can we use these options? Simple, we just write out an array and then add a second parameter to the method call.
 For example:
