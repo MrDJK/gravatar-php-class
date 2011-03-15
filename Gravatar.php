@@ -1,9 +1,12 @@
 <?php
-/*
- * @package		Gravatar Static Class
- * @version		1.0
+/* 
+ * Gravatar PHP5 Class
+ *
  * @author		Karl Ballard
+ * @copyright 	Copyright (c) 2011
+ * @license 	http://philsturgeon.co.uk/code/dbad-license
  * @link		https://github.com/ballard-k/gravatar-php-class
+ * @version		1.0
  */
 namespace Gravatar;
 
@@ -12,6 +15,16 @@ class Gravatar
 
 	public static $base_url = 'gravatar.com/avatar/';
 	
+	/*
+	 * Returns a image or the URL to the image of a Gravatar based off an email
+	 * address.
+	 *
+	 *     echo Gravatar::get_image('example@example.tld', $img_config);
+	 *
+	 * @param   string 		Email adresss or a MD5'd hash of an Email
+	 * @param   array 		Allows multiple keys with values to give more control
+	 * @return  string
+	 */
 	public static function get_image($id, $params = array())
 	{		
 		$image_url = (isset($_SERVER['HTTPS']) ? 'https://secure.' : 'http://') .
@@ -35,6 +48,14 @@ class Gravatar
 		return $gravatar;
 	}
 	
+	/*
+	 * Returns a hash of an email address.
+	 *
+	 *     echo Gravatar::gen_hash('example@example.tld');
+	 *
+	 * @param   string 		Email adresss or a MD5'd hash of an Email
+	 * @return  string
+	 */
 	public static function gen_hash($identity)
 	{
 		if (filter_var($identity, FILTER_VALIDATE_EMAIL))
@@ -46,3 +67,5 @@ class Gravatar
 	}
 
 }
+
+/* End of file Gravatar.php */
