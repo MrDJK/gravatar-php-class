@@ -6,9 +6,11 @@ For example:
 	example@example.tld // Email address
 	c1ec093716eb76ae6d92e8fdbd020c82 // MD5'd hash of the above email
 
+
 It's quite simple, hey? It is just as simple to use, include the library in your PHP script and to display a Gravatar all you need to do is
 	echo Gravatar::get_image('example@example.tld');
 
+	
 But what if you want more control over what happens? Well, we will give it to you if you require it!
 
 We allow you to edit a bunch of things ranging from a default image the the css class! You can edit:
@@ -18,12 +20,14 @@ We allow you to edit a bunch of things ranging from a default image the the css 
 * rating - The rating of the image (G, PG, R, X)
 * force_default - Whether to or not display the default by force
 
-For those above, you can also check the Gravatar docs at: http://en.gravatar.com/site/implement/images/
+For those above, you can also check the Gravatar docs at: <http://en.gravatar.com/site/implement/images/>
 
-And another two extra options.
+
+We also give you another two extra options, just to increase the ease of using this class:
 
 * generate_image - To generate HTML markup for the image
 * css_id - Add a custom class name to the image if generate_image is TRUE
+	
 	
 Right, how can we use these options? Simple, we just write out an array and then add a second parameter to the method call.
 For example:
@@ -37,5 +41,6 @@ For example:
 	);
 
 	echo Gravatar::get_image('example@example.tld', $img_config);
+
 	
 However, just remember you can include just the one configuration option, or all of them.. You choose, not us!
