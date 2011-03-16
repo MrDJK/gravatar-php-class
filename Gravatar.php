@@ -6,7 +6,7 @@
  * @copyright 	Copyright (c) 2011
  * @license 	http://philsturgeon.co.uk/code/dbad-license
  * @link		https://github.com/ballard-k/gravatar-php-class
- * @version		1.0
+ * @version		1.1
  */
 namespace Gravatar;
 
