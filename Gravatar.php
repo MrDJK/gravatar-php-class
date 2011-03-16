@@ -37,9 +37,9 @@ class Gravatar
 		if (isset($params['rating'])) $opts[] = 'rating='. $params['rating'];
 		if (isset($params['force_default']) && $params['force_default'] === TRUE) $opts[] = 'forcedefault=y';
 		
-		$gravatar = $image_url . '?' . implode($opts, '&');
+		$gravatar = $image_url . (sizeof($opts) > 0 ? '?' . implode($opts, '&') : FALSE);
 		
-		if (isset($params['generate_image']) OR $params['generate_image'] === FALSE)
+		if (isset($params['generate_image']) && $params['generate_image'] === FALSE)
 		{
 			$gravatar = '<img src="'. $gravatar .'" alt="Gravatar" class="'.
 				(isset($params['css_id']) ? $params['css_id'] : 'gravatar') .'" />';
